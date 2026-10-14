@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Landing(){
     const [mode,setMode]=useState('login');
-    const [show,setShowPassword]=useState(false)
+    const [show,setShowPassword]=useState(false);
     return(
         <section className="landing-area">
             <div className="container">

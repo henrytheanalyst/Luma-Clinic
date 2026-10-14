@@ -1,0 +1,38 @@
+import express from "express";
+import cors from "cors";
+import morgan from "morgan";
+import dotenv from 'dotenv';
+import pool from "./db.js";
+dotenv.config();
+import AuthRoutes from './Routes/authRoute.js'
+
+
+const app=express();
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(morgan("dev"));
+app.use(cors());
+
+app.use('/test',async(req,res)=>{
+    try {
+        const result=await pool.query(`SELECT NOW()`);
+        res.status(200).json({
+            message:"Database connection successful",
+            time:result.rows[0].now
+        })
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message:"Connection not established"
+        })
+        
+    }
+})
+
+app.use('/luma-clinic',AuthRoutes)
+
+const port=Number(process.env.PORT || 3000);
+app.listen(port,()=>{
+    console.log(`Server up and running on port ${port}`);
+    
+})
