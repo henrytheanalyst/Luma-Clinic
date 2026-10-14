@@ -1,6 +1,14 @@
-function App(){
-  return(
-    <h1>Hello Luna</h1>
+import Landing from './Components/landing'
+import './App.css'
+
+function App() {
+ 
+  return (
+    <>
+     <Landing/>
+     
+    </>
   )
 }
-export default App;
+
+export default App
