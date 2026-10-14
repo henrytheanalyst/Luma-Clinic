@@ -7,9 +7,28 @@
     min-height: 100vh;
     background-position: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+.message{
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+ .message.success{
+  background: green;
+  box-shadow: 0px 0px 25px -1px #ffffff;
+}
+.message.error{
+  background: #960000;
+   box-shadow: 0px 0px 25px -1px #ffffff;
 }
 .container{
   background: #f5f7f6;
