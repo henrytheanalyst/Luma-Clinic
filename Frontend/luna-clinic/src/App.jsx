@@ -1,17 +1,14 @@
-/*import Landing from './Components/landing'*/
-import SideBar from './Components/SideBar';
-import Header from './Components/Header';
+/*import Landing from './Components/landing';*/
+import SideBar from './Components/Sidebar'
+
 import './App.css'
 
 function App() {
  
   return (
-   <main>
-    <SideBar/>
-    <section className="main-area-content">
-      <Header/>
-    </section>
-   </main>
+    <main className="main-section">
+      <SideBar/>
+    </main>
   )
 }
 
