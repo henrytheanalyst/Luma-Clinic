@@ -1,0 +1,14 @@
+.welcome-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+.welcome-text h1{
+    margin: 10px 0;
+    color: #173331;
+    font-size: 28px;
+}
