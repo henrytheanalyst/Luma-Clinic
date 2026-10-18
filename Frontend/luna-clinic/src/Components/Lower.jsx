@@ -11,7 +11,7 @@ function Lower(){
                     Here's what's happening at Luma today
                 </p>
             </div>
-            <button type="button" className="new-appoitment" >
+            <button type="button" className="new-appointment" >
                   <i className="ri-add-line"></i>
                 New Appointment
             </button>
