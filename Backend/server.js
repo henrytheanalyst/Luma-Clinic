@@ -4,7 +4,8 @@ import morgan from "morgan";
 import dotenv from 'dotenv';
 import pool from "./db.js";
 dotenv.config();
-import AuthRoutes from './Routes/authRoute.js'
+import AuthRoutes from './Routes/authRoute.js';
+import DashboardRoutes from './Routes/dashboardRoute.js'
 
 
 const app=express();
@@ -29,7 +30,8 @@ app.use('/test',async(req,res)=>{
     }
 })
 
-app.use('/luma-clinic',AuthRoutes)
+app.use('/luma-clinic',AuthRoutes);
+app.use('/luma-clinic/dashboard',DashboardRoutes)
 
 const port=Number(process.env.PORT || 3000);
 app.listen(port,()=>{

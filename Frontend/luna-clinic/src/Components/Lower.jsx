@@ -1,7 +1,9 @@
-import './Lower.css'
+import './Lower.css';
+import OverviewCards from './OverviewCards';
 function Lower(){
     return(
-        <div className="welcome-section">
+        <div className="lower">
+            <div className="welcome-section">
             <div className="welcome-text">
                 <p className="welcome-date">
                     {new Date().toLocaleDateString()}
@@ -16,6 +18,9 @@ function Lower(){
                 New Appointment
             </button>
         </div>
+        <OverviewCards/>
+        </div>
+        
     );
 }
 export default Lower;
